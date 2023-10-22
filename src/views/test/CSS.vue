@@ -4,11 +4,10 @@
       {{ number }}
     </div>
     <div class="col-span-8 lg:col-span-5 grid grid-cols-9 p-3 bg-blue-500 border-4 border-black">
-      <div
-        v-for="number in [4, 5, 6, 7]"
-        :key="number"
-        :class="['flex items-center justify-center col-span-' + (number === 4 ? 9 : 3), 'bg-' + (number === 4 ? 'red' : 'blue') + '-500', box]"
-      >
+      <div v-for="number in [4]" :key="number" :class="['flex items-center justify-center col-span-9 bg-red-500', box]">
+        {{ number }}
+      </div>
+      <div v-for="number in [5, 6, 7]" :key="number" :class="['flex items-center justify-center col-span-3', 'bg-' + (number === 4 ? 'red' : 'blue') + '-500', box]">
         {{ number }}
       </div>
     </div>
